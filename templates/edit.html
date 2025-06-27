@@ -1,0 +1,108 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  h3 {
+    margin-top: 40px;
+    color: #2c3e50;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #eaeaea;
+    font-weight: bold;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+  }
+
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button[type="button"] {
+    background-color: #95a5a6;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+</style>
+
+
+<form method="post" id="edit-form">  <!-- removed action="/save" -->
+
+
+  {% for title, data in tables.items() %}
+    <h3>{{ title }} Table</h3>
+    {% if data %}
+      <table border="1">
+        <thead>
+          <tr>
+            {% for col in data[0].keys() %}
+              <th>{{ col }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in data %}
+            <tr>
+              {% for val in row.values() %}
+                <td><input type="text" value="{{ val }}" /></td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <br />
+    {% else %}
+      <p><i>No data in {{ title }} table.</i></p>
+    {% endif %}
+  {% endfor %}
+
+  <button type="submit">💾 Save Changes</button>
+  <a href="/"><button type="button">⬅️ Back</button></a>
+</form>
+<div id="result"></div>
+<h3>Download Updated Data</h3>
+<a href="/download/clients"><button type="button">⬇️ Download Clients CSV</button></a>
+<a href="/download/tasks"><button type="button">⬇️ Download Tasks CSV</button></a>
+<a href="/download/workers"><button type="button">⬇️ Download Workers CSV</button></a>
+<a href="/download/json"><button type="button">⬇️ Download All as JSON</button></a>
+<a href="/">
+  <button>Back to Home</button>
+</a>
+
+<script src="{{ url_for('static', filename='edit.js') }}"></script>
+

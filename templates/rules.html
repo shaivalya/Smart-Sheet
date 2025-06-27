@@ -1,0 +1,34 @@
+<!-- templates/rules.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rule Builder</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Rule Builder</h1>
+  <div id="rules-container"></div>
+  <button onclick="addRule()">+ Add Rule</button>
+
+  <h2>Prioritization Weights</h2>
+  <input type="number" id="weight-slot_limit" placeholder="slot_limit weight" />
+  <input type="number" id="weight-co_run" placeholder="co_run weight" />
+  <input type="number" id="weight-regex_task_name" placeholder="regex_task_name weight" />
+<div id="rule-summary" class="rule-summary">
+  <h3>🧾 Current Rules</h3>
+  <ul id="rule-list"></ul>
+</div>
+
+  <button onclick="saveRules()">💾 Save Rules</button>
+  <h3>Add Rule via Natural Language</h3>
+<input type="text" id="nl-rule" placeholder="e.g. Tasks T1 and T2 should run together" />
+<button onclick="convertNLToRule()">Convert</button>
+
+<div id="nl-rule-result"></div>
+
+  <a href="/download/rules"><button>⬇️ Download rules.json</button></a>
+
+  <script src="{{ url_for('static', filename='rules.js') }}"></script>
+</body>
+</html>

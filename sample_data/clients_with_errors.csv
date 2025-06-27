@@ -1,0 +1,5 @@
+ClientID,ClientName,AttributesJSON,RequestedTaskIDs,PriorityLevel
+C001,Alice,"{""age"": 30, ""city"": ""New York""}","T01,T02",1
+C002,Bob,"{age: 25, city: ""LA""}",T03,2
+C003,Charlie,"{""age"": 22, ""city"": ""Miami""}",T99,3
+C001,Danny,"{""age"": 28, ""city"": ""Chicago""}",T01,2

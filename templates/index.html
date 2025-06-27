@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload CSVs</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h2>Upload CSV's</h2>
+  <p>CSVs (clients, tasks, workers) to validate, edit, and query using simple AI.</p>
+
+  <form id="upload-form">
+    <label>Clients CSV:<input type="file" name="clients" required /></label>
+    <label>Tasks CSV:<input type="file" name="tasks" required /></label>
+    <label>Workers CSV:<input type="file" name="workers" required /></label>
+    <button type="submit">Upload & Validate</button>
+    <div class="ai-teaser">
+  🤖 <strong>Want to auto-generate rules based on data?<br> Go to rules page</strong><br>
+
+</div>
+
+  </form>
+
+  <div id="result"></div>
+  <a href="/rules">
+  <button>Go to Rules Page</button>
+</a>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+

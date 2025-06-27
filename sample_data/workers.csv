@@ -1,0 +1,16 @@
+WorkerID,WorkerName,Skills,AvailableSlots,MaxLoadPerPhase,WorkerGroup,QualificationLevel
+W1,Worker 1,"SQL,Python,CSS,Pandas","[2, 3, 4]",3,GroupC,3
+W2,Worker 2,"JavaScript,Pandas,AWS","[1, 2, 3, 5]",2,GroupB,3
+W3,Worker 3,"Docker,AWS,SQL,Pandas,Python","[1, 3]",3,GroupA,3
+W4,Worker 4,"AWS,REST,SQL,Pandas,JavaScript","[1, 3, 4, 5]",3,GroupC,3
+W5,Worker 5,"CSS,Bash,Pandas,JavaScript,SQL","[1, 2]",5,GroupC,3
+W6,Worker 6,"CSS,JavaScript,SQL,REST","[1, 2, 4]",3,GroupB,1
+W7,Worker 7,"Docker,JavaScript,Bash,HTML,SQL","[2, 3, 4, 5]",3,GroupB,4
+W8,Worker 8,"Docker,HTML,AWS,CSS,Pandas","[1, 3, 5]",2,GroupA,5
+W9,Worker 9,"CSS,Python,SQL","[1, 2, 3, 4]",3,GroupC,2
+W10,Worker 10,"AWS,REST,Docker,CSS,Bash","[1, 3, 4, 5]",4,GroupB,3
+W11,Worker 11,"REST,SQL,HTML","[1, 2, 3, 5]",2,GroupA,1
+W12,Worker 12,"CSS,REST,Python,AWS,HTML","[1, 2, 4, 5]",3,GroupB,1
+W13,Worker 13,"AWS,HTML,SQL,Python,CSS","[2, 3, 4, 5]",4,GroupC,3
+W14,Worker 14,"Pandas,REST,Docker,SQL","[1, 2, 5]",3,GroupB,4
+W15,Worker 15,"CSS,AWS,HTML,Pandas","[3, 4]",5,GroupC,5
